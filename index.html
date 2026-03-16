@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>地球探险（Earth Ascent）</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-label="Earth Ascent">
+      <canvas id="game" width="480" height="800" aria-label="Game Canvas"></canvas>
+
+      <section class="hud" aria-label="HUD">
+        <div class="hud__row">
+          <div class="hud__stat">
+            <div class="hud__label">探索范围 X</div>
+            <div class="hud__value" id="hudX">—</div>
+          </div>
+          <div class="hud__stat">
+            <div class="hud__label">衰减状态</div>
+            <div class="hud__value" id="hudDecay">—</div>
+          </div>
+        </div>
+
+        <div class="hud__row hud__row--sub">
+          <div class="hud__hint" id="hudHint">用范围扇形判断可达：选择一颗星球。</div>
+          <div class="hud__target" id="hudTarget">目标：—</div>
+        </div>
+
+        <div class="hud__debug hud__debug--hidden" id="hudDebug"></div>
+      </section>
+
+      <section class="overlay overlay--hidden" id="overlay" aria-label="Overlay">
+        <div class="overlay__card">
+          <h1 class="overlay__title" id="overlayTitle">—</h1>
+          <p class="overlay__body" id="overlayBody">—</p>
+          <div class="overlay__actions">
+            <button class="btn" id="btnRestart" type="button">重新开始</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js?v=20260131-9"></script>
+  </body>
+</html>
